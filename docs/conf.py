@@ -6,16 +6,16 @@
 
 import datetime
 
-# -- Project information -----------------------------------------------------
-
 # The full version, including alpha/beta/rc tags
 from repo_stats import __version__
 
+# -- Project information -----------------------------------------------------
+
 release = __version__
 
-project = "repo_stats"
-author = "The Astropy Developers"
-copyright = f"{datetime.datetime.now().year}, {author}"  # noqa: A001
+project = "sunpy-contribution-statistics"
+author = "The SunPy Developers"
+copyright = f"{datetime.datetime.now(tz=datetime.UTC).year}, {author}"  # noqa: A001
 
 # -- General configuration ---------------------------------------------------
 

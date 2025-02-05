@@ -1,13 +1,16 @@
-import os
 import ast
-from datetime import datetime, timezone
+import os
+from datetime import UTC, datetime
+from pathlib import Path
+
 import numpy as np
 from PIL import Image
 
 
 def rolling_average(unaveraged, window):
     """
-    Obtain a rolling average of 'unaveraged' data in a sliding window of index length 'window'
+    Obtain a rolling average of 'unaveraged' data in a sliding window of index
+    length 'window'.
 
     Arguments
     ---------
@@ -26,15 +29,15 @@ def rolling_average(unaveraged, window):
     if not window % 2:
         print("window_avg should be odd --> decreasing by 1")
         window -= 1
-
     roll_avg = np.convolve(unaveraged, np.ones(window), mode="valid") / window
-
     return roll_avg, window
 
 
 def fill_missed_months(unique_output):
     """
-    For an output of 'np.unique(x, return_counts=True)' where 'x' is a list of dates of the format '2024-01', fill in months missing in this list and set their count to 0.
+    For an output of 'np.unique(x, return_counts=True)' where 'x' is a list of
+    dates of the format '2024-01', fill in months missing in this list and set
+    their count to 0.
 
     Arguments
     ---------
@@ -47,32 +50,25 @@ def fill_missed_months(unique_output):
         The input updated with inserted entries for missing months
     """
     unique_output = list(unique_output)
-
-    now = datetime.now(timezone.utc)
-
+    now = datetime.now(UTC)
     # build list of 'year-month' from oldest entry in 'unique_output' to current month
     oldest, newest = min(unique_output[0]), f"{now.year}-{now.month:02d}"
     years = [str(y) for y in list(range(int(oldest[:4]), int(newest[:4]) + 1))]
     months = [f"{m:02d}" for m in list(range(1, 13))]
-    dates = []
-    for y in years:
-        for m in months:
-            dates.append(f"{y}-{m}")
+    dates = [f"{y}-{m}" for y in years for m in months]
     dates = dates[dates.index(oldest) : dates.index(newest) + 1]
-
     # insert missing dates into 'unique_output'
     missed_months = [i for i in dates if i not in unique_output[0]]
     for i in missed_months:
         idx = np.searchsorted(unique_output[0], i)
         unique_output[0] = np.insert(unique_output[0], idx, i)
         unique_output[1] = np.insert(unique_output[1], idx, 0)
-
     return unique_output
 
 
 def update_cache(cache_file, old_items, new_items):
     """
-    Update 'cache_file' with 'new_items' entries, one per line
+    Update 'cache_file' with 'new_items' entries, one per line.
 
     Arguments
     ---------
@@ -86,28 +82,23 @@ def update_cache(cache_file, old_items, new_items):
     all_items : list of str
         Combined 'old_items' and 'new_items'
     """
-    with open(cache_file, "a+") as f:
+    with Path(cache_file).open("a+") as f:
         # add initial new line only when appending to existing entries in cache
         if len(old_items) != 0 and new_items != []:
             f.writelines("\n")
-
         f.writelines("\n".join([str(i) for i in new_items]))
-
         if new_items == []:
-            print(f"  No new entries found - cache not updated")
+            print("  No new entries found - cache not updated")
         else:
             print(f"\n  Updated cache at {cache_file} with {len(new_items)} entries")
-
-    with open(cache_file, "r") as f:
+    with Path(cache_file).open() as f:
         all_items = f.readlines()
-        all_items = [ast.literal_eval(i.rstrip("\n")) for i in all_items]
-
-    return all_items
+        return [ast.literal_eval(i.rstrip("\n")) for i in all_items]
 
 
-def make_transparent(image, color=(0,0,0)):
+def make_transparent(image, color=(0, 0, 0)):
     """
-    Make a chosen color in an image transparent, save resulting image as .png
+    Make a chosen color in an image transparent, save resulting image as .png.
 
     Arguments
     ---------
@@ -115,17 +106,14 @@ def make_transparent(image, color=(0,0,0)):
         Path to image file
     color : tuple, default=(0,0,0)
         RGB values of color to be made transparent
-    """    
-    im = Image.open(image) 
-    rgba = im.convert("RGBA") 
-    pixel_colors = rgba.getdata() 
-  
+    """
+    im = Image.open(image)
+    rgba = im.convert("RGBA")
+    pixel_colors = rgba.getdata()
     # in RGBA, transparent in (255, 255, 255, 0)
     t = (255, 255, 255, 0)
     pixel_colors_trans = [t if x[:3] == color else x for x in pixel_colors]
-    rgba.putdata(pixel_colors_trans) 
-
-    savename = f"{os.path.splitext(image)[0]}_transparent.png"
+    rgba.putdata(pixel_colors_trans)
+    savename = f"{os.path.splitext(image)[0]}_transparent.png"  # NOQA: PTH122
     print(f"Saving updated image as {savename}")
-    rgba.save(savename, "PNG") 
-    
+    rgba.save(savename, "PNG")

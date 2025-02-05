@@ -15,7 +15,7 @@ git_metrics
 .. currentmodule:: repo_stats.git_metrics
 
 .. autoclass:: repo_stats.git_metrics.GitMetrics
-  :members: get_age, parse_log_line, get_commits, get_commits_via_git_log, process_commits, get_issues_PRs, process_issues_PRs
+  :members: get_age, parse_log_line, get_commits, get_commits_via_git_log, process_commits, get_issues_prs, process_issues_prs
 
 plot
 ----
@@ -26,9 +26,9 @@ plot
 
 .. autofunction:: citation_plot
 
-.. autofunction:: open_issue_PR_plot
+.. autofunction:: open_issue_pr_plot
 
-.. autofunction:: issue_PR_time_plot
+.. autofunction:: issue_pr_time_plot
 
 runner
 ------

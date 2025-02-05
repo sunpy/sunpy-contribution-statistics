@@ -3,9 +3,9 @@ name: Docs
 on:
   workflow_dispatch:
   # push:
-  #   branches: 
+  #   branches:
   #     - main
-# when a review is requested on a PR that targets `main`, or the PR is closed:    
+# when a review is requested on a PR that targets `main`, or the PR is closed:
   # pull_request:
   #   types: [review_requested, closed]
 
@@ -17,7 +17,7 @@ jobs:
   docs-build:
     name: Build docs
     runs-on: ubuntu-latest
-    if: (github.repository == 'astropy/repo_stats')
+    if: (github.repository == 'sunpy/sunpy-contribution-statistics')
 
     steps:
       - name: Check out repo
@@ -42,7 +42,7 @@ jobs:
           pip install .
           cd docs
           make html
-          
+
       # upload the built docs as an artifact so the files can be accessed
       # by a subsequent job in the workflow.
       # only store the artifact for 'retention-days'
@@ -58,9 +58,9 @@ jobs:
     name: Deploy docs
     needs: docs-build
     runs-on: ubuntu-latest
-    if: (github.repository == 'astropy/repo_stats')
+    if: (github.repository == 'sunpy/sunpy-contribution-statistics')
     # if: github.event.pull_request.merged == true
-    permissions: 
+    permissions:
       contents: write
 
     steps:
