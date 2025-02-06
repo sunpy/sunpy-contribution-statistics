@@ -7,11 +7,12 @@ name = "repo_stats"
 description = "Repository and citation statistics"
 dynamic = ["version"]
 readme = { file = "README.rst", content-type = "text/x-rst" }
-license = { file = "LICENSE.rst", content-type = "text/plain" }
+license = { file = "LICENSE.rst" }
 authors = [
-  { name = "The Astropy Developers", email = "astropy.team@gmail.com" },
+    { name = "The Astropy Developers", email = "astropy.team@gmail.com" },
+    { name = "The SunPy Developers", email = "stuart@cadair.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.13"
 dependencies = ["matplotlib>=3.8.4", "numpy>=1.24", "pillow>=10.4.0", "requests>=2.32.2"]
 
 [project.optional-dependencies]
@@ -23,16 +24,9 @@ docs = [
     "sphinx-automodapi",
     "sphinx_rtd_theme",
     "sphinxcontrib-fulltoc",
-    "nbsphinx",
-    "jupyter_client",
-    "ipykernel",
-]
-coding_standards = [
-    "black",
-    "ruff",
 ]
 
-dev = ["repo_stats[test, docs, coding_standards]"]
+dev = ["repo_stats[test, docs]"]
 
 [tool.setuptools]
 zip-safe = false
@@ -42,20 +36,20 @@ include-package-data = true
 
 [tool.pytest.ini_options]
 testpaths = [
-  "test",
-  "docs",
+    "test",
+    "docs",
 ]
 
 [tool.mypy]
 exclude = [
-  "docs",
+    "docs",
 ]
-explicit_package_bases = "True"
+explicit_package_bases = true
 
 [tool.coverage.run]
 omit = [
- "repo_stats/__init*",
- "*/repo_stats/__init*",
- "test/*",
- "*/test/*",
+    "repo_stats/__init*",
+    "*/repo_stats/__init*",
+    "test/*",
+    "*/test/*",
 ]

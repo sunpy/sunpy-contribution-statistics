@@ -1,4 +1,4 @@
-Copyright (c) 2024, Astropy Developers
+Copyright (c) 2024-2025, Astropy Developers and SunPy Developers
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
