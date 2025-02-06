@@ -1,6 +1,7 @@
 from datetime import UTC, datetime
 
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.lines import Line2D
 
 from repo_stats.utilities import rolling_average
@@ -10,6 +11,46 @@ MS = [".", "+", "^", "*", "x", "o"]
 CS = ["#ff8300", "#23d361", "#bf177a", "#20c8ed", "#2c3e50"]
 NOW = datetime.now(UTC).strftime("%B %d, %Y")
 plt.rcParams["font.size"] = 11
+
+
+def author_plot(commit_stats, repo_owner, repo_name, cache_dir, commit_number=10):
+    """
+    Plot authors as a function of commit number.
+
+    Arguments
+    ---------
+    commit_stats : dict
+        Dictionary including commit statistics. See `git_metrics.Gits.process_commits()`
+    repo_owner : str
+        Owner of repository (for labels)
+    repo_name : str
+        Name of repository (for labels and figure savename)
+    cache_dir : str
+        Name of directory in which to cache figure
+    commit_number : int
+        Minimum number of commits for an author to be included in the plot
+        Defaults to 5.
+
+    Returns
+    -------
+    fig : `plt.figure` instance
+        The generated figure
+    """
+    print(f"\nMaking figure: commit authors as a function of commits - higher than {commit_number} commits")
+    fig = plt.figure(figsize=(10, 6))
+    data = commit_stats["commits_for_each_author"]
+    data = dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
+    data = {k: v for k, v in data.items() if v > commit_number}
+    names = list(data.keys())
+    values = list(data.values())
+    plt.barh(np.arange(len(names)), values, align="center", tick_label=names)
+    plt.yticks(fontsize=4 if len(names) > 50 else 6)
+    plt.title(f"Commits (> {commit_number}) per author for {repo_owner}/{repo_name} (generated on {NOW})")
+    plt.xlabel("N")
+    plt.gca().invert_yaxis()
+    plt.tight_layout()
+    plt.savefig(f"{cache_dir}/{repo_name}_commits_per_author.png", dpi=300)
+    return fig
 
 
 def author_time_plot(commit_stats, repo_owner, repo_name, cache_dir, window_avg=7):

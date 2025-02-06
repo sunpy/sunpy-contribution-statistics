@@ -5,7 +5,7 @@ from pathlib import Path
 import repo_stats
 from repo_stats.citation_metrics import ADSCitations
 from repo_stats.git_metrics import GitMetrics
-from repo_stats.plot import author_time_plot, citation_plot, issue_pr_time_plot, open_issue_pr_plot
+from repo_stats.plot import author_plot, author_time_plot, citation_plot, issue_pr_time_plot, open_issue_pr_plot
 from repo_stats.user_stats import StatsImage
 
 repo_stats_path = Path(repo_stats.__file__).parent
@@ -109,6 +109,12 @@ def main(*args):
         userstatsimage = StatsImage(ii, params["font"])
         userstatsimage.update_image(all_stats, params["repo_name"], params["cache_dir"])
     citation_plot(cite_stats, params["repo_name"], params["cache_dir"], params["bib_names"])
+    author_plot(
+        commit_stats,
+        params["repo_owner"],
+        params["repo_name"],
+        params["cache_dir"],
+    )
     author_time_plot(
         commit_stats,
         params["repo_owner"],
