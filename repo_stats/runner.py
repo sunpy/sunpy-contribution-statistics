@@ -1,5 +1,6 @@
 import argparse
 import json
+from collections import Counter
 from pathlib import Path
 
 import repo_stats
@@ -87,48 +88,73 @@ def main(*args):
     params = parse_parameters(*args)
     cites = ADSCitations(params["ads_token"], params["cache_dir"])
     cite_stats = cites.aggregate_citations(params["bibs"], params["ads_metrics"])
-    gits = GitMetrics(
-        params["git_token"],
-        params["repo_owner"],
-        params["repo_name"],
-        params["cache_dir"],
-    )
-    commits = gits.get_commits()
-    commit_stats = gits.process_commits(commits, params["age_recent_commit"])
-    issues = gits.get_issues_prs("issues")
-    prs = gits.get_issues_prs("pullRequests")
-    issue_pr_stats = gits.process_issues_prs(
-        [issues, prs],
-        ["issues", "pullRequests"],
-        params["labels"],
-        params["age_recent_issue_pr"],
-    )
-    all_stats = {**cite_stats, **commit_stats, **issue_pr_stats}
-    print("\nUpdating dashboard image with stats")
-    for ii in params["template_image"]:
-        userstatsimage = StatsImage(ii, params["font"])
-        userstatsimage.update_image(all_stats, params["repo_name"], params["cache_dir"])
-    citation_plot(cite_stats, params["repo_name"], params["cache_dir"], params["bib_names"])
+    citation_plot(cite_stats, params["repo_names"][0], params["cache_dir"], params["bib_names"])
+    total_commit_stats = {}
+    for repo_name in params["repo_names"]:
+        gits = GitMetrics(
+            params["git_token"],
+            params["repo_owner"],
+            repo_name,
+            params["cache_dir"],
+        )
+        commits = gits.get_commits()
+        commit_stats = gits.process_commits(commits, params["age_recent_commit"])
+        total_commit_stats[repo_name] = commit_stats["commits_for_each_author"]
+        issues = gits.get_issues_prs("issues")
+        prs = gits.get_issues_prs("pullRequests")
+        issue_pr_stats = gits.process_issues_prs(
+            [issues, prs],
+            ["issues", "pullRequests"],
+            params["labels"],
+            params["age_recent_issue_pr"],
+        )
+        all_stats = {**cite_stats, **commit_stats, **issue_pr_stats}
+        print("\nUpdating dashboard image with stats")
+        for ii in params["template_image"]:
+            userstatsimage = StatsImage(ii, params["font"])
+            userstatsimage.update_image(all_stats, repo_name, params["cache_dir"])
+        author_plot(
+            commit_stats,
+            params["repo_owner"],
+            repo_name,
+            params["cache_dir"],
+        )
+        author_time_plot(
+            commit_stats,
+            params["repo_owner"],
+            repo_name,
+            params["cache_dir"],
+            params["window_avg"],
+        )
+        open_issue_pr_plot(issue_pr_stats, repo_name, params["cache_dir"])
+        issue_pr_time_plot(
+            issue_pr_stats,
+            params["repo_owner"],
+            repo_name,
+            params["cache_dir"],
+            params["window_avg"],
+        )
+    total_commit_stats["commits_for_each_author"] = Counter()
+    for counts in total_commit_stats.values():
+        total_commit_stats["commits_for_each_author"] += counts
+    # Nabil workaround
+    for name in total_commit_stats["commits_for_each_author"]:
+        if name == "Nabil":
+            total_commit_stats["commits_for_each_author"]["Nabil Freij"] += total_commit_stats[
+                "commits_for_each_author"
+            ]["Nabil"]
+        if name == "Nabobalis":
+            total_commit_stats["commits_for_each_author"]["Nabil Freij"] += total_commit_stats[
+                "commits_for_each_author"
+            ]["Nabobalis"]
+    total_commit_stats["commits_for_each_author"].pop("Nabil", None)
+    total_commit_stats["commits_for_each_author"].pop("Nabobalis", None)
     author_plot(
-        commit_stats,
+        total_commit_stats,
         params["repo_owner"],
-        params["repo_name"],
+        "Every Repository",
         params["cache_dir"],
-    )
-    author_time_plot(
-        commit_stats,
-        params["repo_owner"],
-        params["repo_name"],
-        params["cache_dir"],
-        params["window_avg"],
-    )
-    open_issue_pr_plot(issue_pr_stats, params["repo_name"], params["cache_dir"])
-    issue_pr_time_plot(
-        issue_pr_stats,
-        params["repo_owner"],
-        params["repo_name"],
-        params["cache_dir"],
-        params["window_avg"],
+        commit_number=100,
     )
 
 

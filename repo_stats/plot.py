@@ -13,7 +13,7 @@ NOW = datetime.now(UTC).strftime("%B %d, %Y")
 plt.rcParams["font.size"] = 11
 
 
-def author_plot(commit_stats, repo_owner, repo_name, cache_dir, commit_number=10):
+def author_plot(commit_stats, repo_owner, repo_name, cache_dir, commit_number=5):
     """
     Plot authors as a function of commit number.
 
