@@ -1,6 +1,6 @@
 {
     "repo_owner": "sunpy",
-    "repo_name": "sunpy",
+    "repo_names": ["sunpy", "sunpy.org", "package-template", "sunkit-spex", "sunkit-instruments", "drms", "sunkit-magex", "sunpy-sphinx-theme", "ndcube", "sunraster", "streamtracer", "sunkit-image", "sunpy-soar", "sunkit-pyvista", "mpl-animators", "radiospectra", "sunkit-dem", "pyflct", "ablog"],
     "template_image": null,
     "age_recent_commit": 180,
     "age_recent_issue_pr": 180,

@@ -17,4 +17,4 @@ where the tokens are for access to the [NASA ADS API](https://ui.adsabs.harvard.
 
 For current output files, see the `cache` branch.
 
-Borrowed from `https://github.com/sunpy/sunpy-contribution-statistics` with much love.
+Borrowed from https://github.com/astropy/repo_stats with much love.
