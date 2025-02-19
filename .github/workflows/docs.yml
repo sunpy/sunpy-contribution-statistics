@@ -6,8 +6,8 @@ on:
   #   branches:
   #     - main
 # when a review is requested on a PR that targets `main`, or the PR is closed:
-  # pull_request:
-  #   types: [review_requested, closed]
+# pull_request:
+#   types: [review_requested, closed]
 
 # Prevent multiple PRs from building/deploying the docs at the same time
 concurrency:
@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Set up Python
-        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38  # v5.4.0
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
         with:
           python-version: 3.11
 
@@ -48,7 +48,7 @@ jobs:
       # only store the artifact for 'retention-days'
       - name: Upload docs artifact
         # if: github.event.pull_request.merged == true
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08  # v4.6.0
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         with:
           name: built_docs
           path: docs/_build/html
@@ -65,11 +65,11 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       # download the previously uploaded 'built_docs' artifact
       - name: Download docs artifact
-        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16  # v4.1.8
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
         id: download
         with:
           name: built_docs

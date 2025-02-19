@@ -2,6 +2,7 @@ import ast
 import contextlib
 import subprocess
 import time
+from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -193,8 +194,8 @@ class GitMetrics:
         -------
         dates : list of str
             Date of each commit
-        authors : list of str
-            Author of each commit
+        author_commits : dict
+            Keys are the authors and the value is a list of the commits they have contributed
         """
         print("\nCollecting git commit history")
         git_log = subprocess.run(
@@ -204,15 +205,16 @@ class GitMetrics:
             text=True,
             check=False,
         )
-        dates, authors = [], []
+        dates = []
+        authors_with_commits = defaultdict(list)
         for line in git_log.stdout.splitlines():
-            _, date, author = self.parse_log_line(line)
+            commit, date, author = self.parse_log_line(line)
             dates.append(date)
-            authors.append(author)
+            authors_with_commits[author].append(commit)
         if len(dates) == 0:
             msg = f"0 commits found for repository in git log. Check that 'repo_dir' {repo_local_path} in the .json parameter file is correct."
             raise RuntimeError(msg)
-        return dates, authors
+        return dates, authors_with_commits
 
     def process_commits(self, results, age_recent=90):
         """
@@ -245,6 +247,7 @@ class GitMetrics:
             "meeseeksmachine",
             "odidev",
             "pre-commit-ci[bot]",
+            "codetriage-readme-bot",
             "unknown",
         ]
         for ii in results:
@@ -267,6 +270,7 @@ class GitMetrics:
             idxs = np.where(np.array(user_ids) == i)[0]
             for j in idxs:
                 authors[j] = authors[idxs[-1]]
+        commits_for_each_author = Counter(authors)
         dates_strip_day = [d[:7] for d in dates]
         zipped = list(zip(dates_strip_day, authors, strict=False))
         unique_month_author_pairs = np.unique(zipped, axis=0, return_counts=True)
@@ -308,6 +312,7 @@ class GitMetrics:
             "authors_per_month": authors_per_month,
             "new_authors_per_month": new_authors_per_month,
             "multi_authors_per_month": multi_authors_per_month,
+            "commits_for_each_author": commits_for_each_author,
         }
 
     def get_issues_prs(self, item_type):
@@ -441,7 +446,7 @@ class GitMetrics:
         items : list of str
             Names for the dictionary entries in the return 'issues_prs'
         labels : list of str
-            GitHub labels (those added to an issue or pull request) to obtain additional statistics for
+            GitHub labels (those added to an issue or pull request) to obtain additional statistics
         age_recent : int, default=90
             Days before present used to categorize recent issue and pull request statistics
 

@@ -17,12 +17,12 @@ jobs:
 
     steps:
       - name: Check out repo
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Set up Python
-        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38  # v5.4.0
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
         with:
-          python-version: 3.11
+          python-version: 3.13
 
       - name: Display system info
         run: |
@@ -46,7 +46,7 @@ jobs:
 
       - name: Run update script
         run: |
-          python -m repo_stats.runner -a ${{ secrets.ADS_TOKEN }} -g ${{ secrets.GIT_TOKEN }} -c "cache"
+          python -m repo_stats.runner -a ${{ secrets.ADS_TOKEN }} -g ${{ secrets.PAT_GITHUB_TOKEN }} -c "cache"
 
       # caches are immutable, so create a new one (new key) each time any of the files being cached change.
       # the cache key will be new if any files in the cache path have been changed by 'repo_stats.runner'.
