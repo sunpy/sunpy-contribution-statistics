@@ -148,7 +148,7 @@ def main(*args):
     author_plot(
         total_commit_stats,
         base_params["repo_owner"],
-        "Every Repository",
+        "Every_repository",
         Path(cache_dir).parent,
         commit_number=50,
     )
