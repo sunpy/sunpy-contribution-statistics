@@ -133,7 +133,8 @@ def main(*args):
             cache_dir,
             base_params["window_avg"],
         )
-        open_issue_pr_plot(issue_pr_stats, repo_name, cache_dir)
+        if "issues" in issue_pr_stats:
+            open_issue_pr_plot(issue_pr_stats, repo_name, cache_dir)
         issue_pr_time_plot(
             issue_pr_stats,
             base_params["repo_owner"],
