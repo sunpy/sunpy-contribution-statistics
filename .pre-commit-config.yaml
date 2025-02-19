@@ -28,7 +28,11 @@ repos:
     rev: v2.3.0
     hooks:
       - id: codespell
-        args: [ "--write-changes" ]
+        args: ["--write-changes"]
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.5.1
+    hooks:
+      - id: prettier
 ci:
   autofix_prs: false
   autoupdate_schedule: "quarterly"

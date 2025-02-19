@@ -85,76 +85,71 @@ def main(*args):
     *args : list of str
         Simulates the command line arguments
     """
-    params = parse_parameters(*args)
-    cites = ADSCitations(params["ads_token"], params["cache_dir"])
-    cite_stats = cites.aggregate_citations(params["bibs"], params["ads_metrics"])
-    citation_plot(cite_stats, params["repo_names"][0], params["cache_dir"], params["bib_names"])
+    base_params = parse_parameters(*args)
     total_commit_stats = {}
-    for repo_name in params["repo_names"]:
+    for repo in base_params["repos"]:
+        repo_name = repo["repo_name"]
+        cache_dir = f"{base_params['cache_dir']}/{repo_name}"
+        Path(cache_dir).mkdir(parents=True, exist_ok=True)
+        print(f"\nAnalyzing {repo_name}")
+        if "bibs" in repo:
+            cites = ADSCitations(base_params["ads_token"], cache_dir)
+            cite_stats = cites.aggregate_citations(repo["bibs"], base_params["ads_metrics"])
+            citation_plot(cite_stats, repo_name, cache_dir, repo["bib_names"])
         gits = GitMetrics(
-            params["git_token"],
-            params["repo_owner"],
+            base_params["git_token"],
+            base_params["repo_owner"],
             repo_name,
-            params["cache_dir"],
+            cache_dir,
         )
         commits = gits.get_commits()
-        commit_stats = gits.process_commits(commits, params["age_recent_commit"])
+        commit_stats = gits.process_commits(commits, base_params["age_recent_commit"])
         total_commit_stats[repo_name] = commit_stats["commits_for_each_author"]
         issues = gits.get_issues_prs("issues")
         prs = gits.get_issues_prs("pullRequests")
+        if "labels" not in repo:
+            repo["labels"] = []
         issue_pr_stats = gits.process_issues_prs(
             [issues, prs],
             ["issues", "pullRequests"],
-            params["labels"],
-            params["age_recent_issue_pr"],
+            repo["labels"],
+            base_params["age_recent_issue_pr"],
         )
         all_stats = {**cite_stats, **commit_stats, **issue_pr_stats}
         print("\nUpdating dashboard image with stats")
-        for ii in params["template_image"]:
-            userstatsimage = StatsImage(ii, params["font"])
-            userstatsimage.update_image(all_stats, repo_name, params["cache_dir"])
+        for ii in base_params["template_image"]:
+            userstatsimage = StatsImage(ii, base_params["font"])
+            userstatsimage.update_image(all_stats, repo_name, cache_dir)
         author_plot(
             commit_stats,
-            params["repo_owner"],
+            base_params["repo_owner"],
             repo_name,
-            params["cache_dir"],
+            cache_dir,
         )
         author_time_plot(
             commit_stats,
-            params["repo_owner"],
+            base_params["repo_owner"],
             repo_name,
-            params["cache_dir"],
-            params["window_avg"],
+            cache_dir,
+            base_params["window_avg"],
         )
-        open_issue_pr_plot(issue_pr_stats, repo_name, params["cache_dir"])
+        open_issue_pr_plot(issue_pr_stats, repo_name, cache_dir)
         issue_pr_time_plot(
             issue_pr_stats,
-            params["repo_owner"],
+            base_params["repo_owner"],
             repo_name,
-            params["cache_dir"],
-            params["window_avg"],
+            cache_dir,
+            base_params["window_avg"],
         )
     total_commit_stats["commits_for_each_author"] = Counter()
     for counts in total_commit_stats.values():
         total_commit_stats["commits_for_each_author"] += counts
-    # Nabil workaround
-    for name in total_commit_stats["commits_for_each_author"]:
-        if name == "Nabil":
-            total_commit_stats["commits_for_each_author"]["Nabil Freij"] += total_commit_stats[
-                "commits_for_each_author"
-            ]["Nabil"]
-        if name == "Nabobalis":
-            total_commit_stats["commits_for_each_author"]["Nabil Freij"] += total_commit_stats[
-                "commits_for_each_author"
-            ]["Nabobalis"]
-    total_commit_stats["commits_for_each_author"].pop("Nabil", None)
-    total_commit_stats["commits_for_each_author"].pop("Nabobalis", None)
     author_plot(
         total_commit_stats,
-        params["repo_owner"],
+        base_params["repo_owner"],
         "Every Repository",
-        params["cache_dir"],
-        commit_number=100,
+        cache_dir,
+        commit_number=50,
     )
 
 

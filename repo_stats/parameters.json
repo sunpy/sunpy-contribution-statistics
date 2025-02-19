@@ -1,11 +1,13 @@
 {
-    "repo_owner": "sunpy",
-    "repo_names": ["sunpy", "sunpy.org", "package-template", "sunkit-spex", "sunkit-instruments", "drms", "sunkit-magex", "sunpy-sphinx-theme", "ndcube", "sunraster", "streamtracer", "sunkit-image", "sunpy-soar", "sunkit-pyvista", "mpl-animators", "radiospectra", "sunkit-dem", "pyflct", "ablog"],
-    "template_image": null,
-    "age_recent_commit": 180,
-    "age_recent_issue_pr": 180,
-    "window_avg": 3,
-    "labels": [
+  "repo_owner": "sunpy",
+  "template_image": null,
+  "age_recent_commit": 180,
+  "age_recent_issue_pr": 180,
+  "window_avg": 3,
+  "repos": [
+    {
+      "repo_name": "sunpy",
+      "labels": [
         "coordinates",
         "data",
         "Documentation",
@@ -21,19 +23,75 @@
         "timeseries",
         "util",
         "visualization"
-    ],
-    "bibs": [
+      ],
+      "bibs": [
         "2015CS&D....8a4009S",
         "2020JOSS....5.1832M",
         "2020ApJ...890...68S",
         "2023FrASS..1076726B"
-    ],
-    "bib_names": [
+      ],
+      "bib_names": [
         "Sunpy paper I (2015)",
         "Sunpy Joss (2020)",
         "Sunpy paper II (2020)",
         "Sunpy Project paper I (2023)",
         "All unique citations"
-    ],
-    "ads_metrics": "bibcode, pubdate, pub, author, title"
+      ]
+    },
+    {
+      "repo_name": "sunpy.org"
+    },
+    {
+      "repo_name": "package-template"
+    },
+    {
+      "repo_name": "sunkit-spex"
+    },
+    {
+      "repo_name": "sunkit-instruments"
+    },
+    {
+      "repo_name": "drms"
+    },
+    {
+      "repo_name": "sunkit-magex"
+    },
+    {
+      "repo_name": "sunpy-sphinx-theme"
+    },
+    {
+      "repo_name": "ndcube"
+    },
+    {
+      "repo_name": "sunraster"
+    },
+    {
+      "repo_name": "streamtracer"
+    },
+    {
+      "repo_name": "sunkit-image"
+    },
+    {
+      "repo_name": "sunpy-soar"
+    },
+    {
+      "repo_name": "sunkit-pyvista"
+    },
+    {
+      "repo_name": "mpl-animators"
+    },
+    {
+      "repo_name": "radiospectra"
+    },
+    {
+      "repo_name": "sunkit-dem"
+    },
+    {
+      "repo_name": "pyflct"
+    },
+    {
+      "repo_name": "ablog"
+    }
+  ],
+  "ads_metrics": "bibcode, pubdate, pub, author, title"
 }

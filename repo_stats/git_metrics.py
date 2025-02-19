@@ -446,7 +446,7 @@ class GitMetrics:
         items : list of str
             Names for the dictionary entries in the return 'issues_prs'
         labels : list of str
-            GitHub labels (those added to an issue or pull request) to obtain additional statistics for
+            GitHub labels (those added to an issue or pull request) to obtain additional statistics
         age_recent : int, default=90
             Days before present used to categorize recent issue and pull request statistics
 
