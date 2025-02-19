@@ -149,7 +149,7 @@ def main(*args):
         total_commit_stats,
         base_params["repo_owner"],
         "Every Repository",
-        cache_dir,
+        Path(cache_dir).parent,
         commit_number=50,
     )
 
