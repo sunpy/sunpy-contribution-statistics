@@ -60,7 +60,13 @@
       "repo_name": "sunpy-sphinx-theme"
     },
     {
-      "repo_name": "ndcube"
+      "repo_name": "ndcube",
+      "bibs": ["2023ApJ...956...44R", "2023JOSS....8.5296R"],
+      "bib_names": [
+        "ndcube paper I (2023)",
+        "ndcube Joss (2023)",
+        "All unique citations"
+      ]
     },
     {
       "repo_name": "sunraster"
