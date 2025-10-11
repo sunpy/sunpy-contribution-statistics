@@ -1,0 +1,17 @@
+{'node': {'number': 61, 'state': 'CLOSED', 'createdAt': '2021-04-22T14:49:08Z', 'updatedAt': '2023-03-16T10:09:51Z', 'closedAt': '2023-03-16T10:09:51Z', 'labels': {'edges': []}}}
+{'node': {'number': 65, 'state': 'CLOSED', 'createdAt': '2021-08-04T21:21:07Z', 'updatedAt': '2021-08-05T13:47:02Z', 'closedAt': '2021-08-05T08:00:20Z', 'labels': {'edges': []}}}
+{'node': {'number': 67, 'state': 'CLOSED', 'createdAt': '2021-12-09T21:10:35Z', 'updatedAt': '2023-03-16T09:46:37Z', 'closedAt': '2023-03-16T09:46:37Z', 'labels': {'edges': []}}}
+{'node': {'number': 69, 'state': 'CLOSED', 'createdAt': '2022-02-17T12:26:16Z', 'updatedAt': '2022-03-01T15:33:43Z', 'closedAt': '2022-03-01T15:33:43Z', 'labels': {'edges': []}}}
+{'node': {'number': 77, 'state': 'CLOSED', 'createdAt': '2022-08-05T00:43:11Z', 'updatedAt': '2022-08-05T15:58:04Z', 'closedAt': '2022-08-05T10:34:51Z', 'labels': {'edges': []}}}
+{'node': {'number': 90, 'state': 'CLOSED', 'createdAt': '2022-10-25T03:07:31Z', 'updatedAt': '2022-10-25T23:21:54Z', 'closedAt': '2022-10-25T23:20:43Z', 'labels': {'edges': []}}}
+{'node': {'number': 92, 'state': 'CLOSED', 'createdAt': '2022-12-24T21:37:04Z', 'updatedAt': '2023-03-16T09:23:37Z', 'closedAt': '2023-03-16T09:23:32Z', 'labels': {'edges': []}}}
+{'node': {'number': 93, 'state': 'CLOSED', 'createdAt': '2023-03-15T23:49:04Z', 'updatedAt': '2023-03-16T10:09:17Z', 'closedAt': '2023-03-16T10:09:16Z', 'labels': {'edges': []}}}
+{'node': {'number': 112, 'state': 'CLOSED', 'createdAt': '2024-02-13T11:03:57Z', 'updatedAt': '2024-02-19T10:52:15Z', 'closedAt': '2024-02-19T10:52:14Z', 'labels': {'edges': []}}}
+{'node': {'number': 113, 'state': 'CLOSED', 'createdAt': '2024-02-13T11:04:42Z', 'updatedAt': '2024-05-07T15:20:20Z', 'closedAt': '2024-05-07T15:20:19Z', 'labels': {'edges': []}}}
+{'node': {'number': 114, 'state': 'CLOSED', 'createdAt': '2024-02-13T11:05:28Z', 'updatedAt': '2024-02-19T10:52:15Z', 'closedAt': '2024-02-19T10:52:15Z', 'labels': {'edges': []}}}
+{'node': {'number': 135, 'state': 'CLOSED', 'createdAt': '2024-05-01T14:59:58Z', 'updatedAt': '2024-05-09T08:23:10Z', 'closedAt': '2024-05-09T08:23:10Z', 'labels': {'edges': []}}}
+{'node': {'number': 143, 'state': 'CLOSED', 'createdAt': '2024-05-13T08:49:17Z', 'updatedAt': '2024-05-13T19:29:38Z', 'closedAt': '2024-05-13T19:29:38Z', 'labels': {'edges': []}}}
+{'node': {'number': 153, 'state': 'CLOSED', 'createdAt': '2024-06-17T14:58:25Z', 'updatedAt': '2024-06-17T15:33:36Z', 'closedAt': '2024-06-17T15:33:36Z', 'labels': {'edges': []}}}
+{'node': {'number': 155, 'state': 'CLOSED', 'createdAt': '2024-06-17T15:37:11Z', 'updatedAt': '2024-06-18T21:52:37Z', 'closedAt': '2024-06-18T21:52:37Z', 'labels': {'edges': [{'node': {'name': 'help wanted'}}]}}}
+{'node': {'number': 162, 'state': 'OPEN', 'createdAt': '2024-07-23T19:22:55Z', 'updatedAt': '2024-07-23T19:23:03Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 177, 'state': 'CLOSED', 'createdAt': '2024-10-15T16:11:34Z', 'updatedAt': '2024-11-26T12:29:11Z', 'closedAt': '2024-11-26T12:29:11Z', 'labels': {'edges': []}}, 'endCursor': 'Y3Vyc29yOnYyOpK5MjAyNC0xMC0xNVQxNzoxMTozNCswMTowMM6aVOEx'}
