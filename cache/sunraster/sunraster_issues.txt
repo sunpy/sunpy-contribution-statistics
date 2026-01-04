@@ -1,0 +1,70 @@
+{'node': {'number': 12, 'state': 'CLOSED', 'createdAt': '2017-03-17T15:49:39Z', 'updatedAt': '2017-07-11T16:49:21Z', 'closedAt': '2017-07-11T16:49:21Z', 'labels': {'edges': []}}}
+{'node': {'number': 18, 'state': 'CLOSED', 'createdAt': '2017-05-22T15:59:06Z', 'updatedAt': '2018-06-01T19:43:11Z', 'closedAt': '2018-06-01T19:43:11Z', 'labels': {'edges': [{'node': {'name': 'SJI'}}]}}}
+{'node': {'number': 20, 'state': 'CLOSED', 'createdAt': '2017-05-22T17:41:24Z', 'updatedAt': '2018-05-29T19:14:30Z', 'closedAt': '2018-05-29T19:14:30Z', 'labels': {'edges': [{'node': {'name': 'SJI'}}]}}}
+{'node': {'number': 25, 'state': 'CLOSED', 'createdAt': '2017-07-10T18:12:53Z', 'updatedAt': '2017-10-31T21:46:00Z', 'closedAt': '2017-10-31T21:46:00Z', 'labels': {'edges': [{'node': {'name': 'Spectrograph'}}]}}}
+{'node': {'number': 26, 'state': 'CLOSED', 'createdAt': '2017-07-11T16:52:30Z', 'updatedAt': '2017-07-18T05:37:59Z', 'closedAt': '2017-07-18T05:37:59Z', 'labels': {'edges': []}}}
+{'node': {'number': 27, 'state': 'CLOSED', 'createdAt': '2017-07-11T17:06:35Z', 'updatedAt': '2020-03-27T14:17:25Z', 'closedAt': '2020-03-27T14:17:24Z', 'labels': {'edges': [{'node': {'name': 'help wanted'}}, {'node': {'name': 'general iris tools'}}, {'node': {'name': 'new feature'}}]}}}
+{'node': {'number': 30, 'state': 'CLOSED', 'createdAt': '2017-07-12T20:51:47Z', 'updatedAt': '2018-04-25T03:27:54Z', 'closedAt': '2018-04-25T03:27:54Z', 'labels': {'edges': [{'node': {'name': 'SJI'}}]}}}
+{'node': {'number': 31, 'state': 'CLOSED', 'createdAt': '2017-07-13T14:18:01Z', 'updatedAt': '2018-04-25T03:27:08Z', 'closedAt': '2018-04-25T03:27:08Z', 'labels': {'edges': [{'node': {'name': 'SJI'}}]}}}
+{'node': {'number': 33, 'state': 'CLOSED', 'createdAt': '2017-07-17T15:09:12Z', 'updatedAt': '2017-09-17T04:16:22Z', 'closedAt': '2017-09-17T04:16:22Z', 'labels': {'edges': [{'node': {'name': 'Spectrograph'}}]}}}
+{'node': {'number': 34, 'state': 'CLOSED', 'createdAt': '2017-07-17T15:53:27Z', 'updatedAt': '2018-04-25T03:29:06Z', 'closedAt': '2018-04-25T03:29:06Z', 'labels': {'edges': [{'node': {'name': 'new feature'}}]}}}
+{'node': {'number': 35, 'state': 'CLOSED', 'createdAt': '2017-07-17T17:16:44Z', 'updatedAt': '2018-04-25T03:28:53Z', 'closedAt': '2018-04-25T03:28:53Z', 'labels': {'edges': [{'node': {'name': 'Spectrograph'}}]}}}
+{'node': {'number': 38, 'state': 'CLOSED', 'createdAt': '2017-07-18T05:14:54Z', 'updatedAt': '2017-07-19T03:11:37Z', 'closedAt': '2017-07-19T03:11:37Z', 'labels': {'edges': []}}}
+{'node': {'number': 41, 'state': 'CLOSED', 'createdAt': '2017-07-20T17:45:46Z', 'updatedAt': '2017-08-28T15:55:54Z', 'closedAt': '2017-08-28T15:55:54Z', 'labels': {'edges': [{'node': {'name': 'help wanted'}}]}}}
+{'node': {'number': 43, 'state': 'CLOSED', 'createdAt': '2017-08-01T16:41:51Z', 'updatedAt': '2017-08-01T21:56:22Z', 'closedAt': '2017-08-01T21:56:22Z', 'labels': {'edges': [{'node': {'name': 'Spectrograph'}}]}}}
+{'node': {'number': 47, 'state': 'CLOSED', 'createdAt': '2017-08-10T22:34:18Z', 'updatedAt': '2017-09-15T12:25:58Z', 'closedAt': '2017-09-15T12:25:58Z', 'labels': {'edges': [{'node': {'name': 'Spectrograph'}}]}}}
+{'node': {'number': 66, 'state': 'CLOSED', 'createdAt': '2018-03-14T15:59:28Z', 'updatedAt': '2018-09-18T18:46:28Z', 'closedAt': '2018-09-18T18:46:28Z', 'labels': {'edges': []}}}
+{'node': {'number': 69, 'state': 'CLOSED', 'createdAt': '2018-04-16T19:44:11Z', 'updatedAt': '2020-03-27T14:19:25Z', 'closedAt': '2020-03-27T14:19:25Z', 'labels': {'edges': []}}}
+{'node': {'number': 72, 'state': 'CLOSED', 'createdAt': '2018-04-26T15:19:57Z', 'updatedAt': '2018-05-31T17:46:49Z', 'closedAt': '2018-05-31T17:46:49Z', 'labels': {'edges': []}}}
+{'node': {'number': 73, 'state': 'CLOSED', 'createdAt': '2018-04-26T15:40:29Z', 'updatedAt': '2018-05-29T19:15:49Z', 'closedAt': '2018-05-29T19:15:49Z', 'labels': {'edges': []}}}
+{'node': {'number': 78, 'state': 'CLOSED', 'createdAt': '2018-05-02T13:28:47Z', 'updatedAt': '2018-09-27T13:26:00Z', 'closedAt': '2018-09-27T13:26:00Z', 'labels': {'edges': []}}}
+{'node': {'number': 79, 'state': 'CLOSED', 'createdAt': '2018-05-02T14:34:47Z', 'updatedAt': '2018-05-29T19:15:25Z', 'closedAt': '2018-05-29T19:15:25Z', 'labels': {'edges': []}}}
+{'node': {'number': 80, 'state': 'CLOSED', 'createdAt': '2018-05-02T18:48:21Z', 'updatedAt': '2022-03-08T18:49:33Z', 'closedAt': '2022-03-08T18:49:33Z', 'labels': {'edges': [{'node': {'name': 'IRISpy'}}]}}}
+{'node': {'number': 82, 'state': 'CLOSED', 'createdAt': '2018-05-04T16:30:43Z', 'updatedAt': '2022-03-08T18:55:03Z', 'closedAt': '2022-03-08T18:55:02Z', 'labels': {'edges': [{'node': {'name': 'IRISpy'}}]}}}
+{'node': {'number': 92, 'state': 'CLOSED', 'createdAt': '2018-06-01T19:41:39Z', 'updatedAt': '2020-03-24T05:30:48Z', 'closedAt': '2020-03-24T05:30:48Z', 'labels': {'edges': []}}}
+{'node': {'number': 96, 'state': 'CLOSED', 'createdAt': '2018-06-14T12:27:38Z', 'updatedAt': '2018-06-20T09:55:17Z', 'closedAt': '2018-06-20T09:55:17Z', 'labels': {'edges': []}}}
+{'node': {'number': 100, 'state': 'CLOSED', 'createdAt': '2018-08-08T10:01:06Z', 'updatedAt': '2022-03-08T18:53:13Z', 'closedAt': '2022-03-08T18:52:46Z', 'labels': {'edges': [{'node': {'name': 'IRISpy'}}]}}}
+{'node': {'number': 105, 'state': 'CLOSED', 'createdAt': '2018-09-25T20:16:05Z', 'updatedAt': '2019-04-12T19:45:54Z', 'closedAt': '2019-04-12T19:45:54Z', 'labels': {'edges': []}}}
+{'node': {'number': 107, 'state': 'CLOSED', 'createdAt': '2018-10-02T17:32:53Z', 'updatedAt': '2019-04-12T19:54:30Z', 'closedAt': '2019-04-12T19:54:30Z', 'labels': {'edges': []}}}
+{'node': {'number': 113, 'state': 'CLOSED', 'createdAt': '2019-08-01T18:12:15Z', 'updatedAt': '2019-11-12T16:14:39Z', 'closedAt': '2019-11-12T16:14:39Z', 'labels': {'edges': []}}}
+{'node': {'number': 126, 'state': 'CLOSED', 'createdAt': '2020-02-12T19:47:01Z', 'updatedAt': '2022-06-08T19:27:12Z', 'closedAt': '2022-06-08T19:27:12Z', 'labels': {'edges': [{'node': {'name': 'IRISpy'}}]}}}
+{'node': {'number': 131, 'state': 'CLOSED', 'createdAt': '2020-03-22T22:01:43Z', 'updatedAt': '2020-04-10T23:40:23Z', 'closedAt': '2020-04-10T23:40:22Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 132, 'state': 'CLOSED', 'createdAt': '2020-03-22T22:59:47Z', 'updatedAt': '2020-03-29T06:07:04Z', 'closedAt': '2020-03-24T03:13:10Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 133, 'state': 'CLOSED', 'createdAt': '2020-03-22T23:02:42Z', 'updatedAt': '2020-03-29T06:07:04Z', 'closedAt': '2020-03-29T06:02:38Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 134, 'state': 'CLOSED', 'createdAt': '2020-03-23T19:52:35Z', 'updatedAt': '2020-03-29T06:07:05Z', 'closedAt': '2020-03-29T06:02:46Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 135, 'state': 'CLOSED', 'createdAt': '2020-03-27T14:31:08Z', 'updatedAt': '2020-03-29T06:07:05Z', 'closedAt': '2020-03-27T14:37:42Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 137, 'state': 'CLOSED', 'createdAt': '2020-03-29T06:04:02Z', 'updatedAt': '2020-04-11T18:31:04Z', 'closedAt': '2020-04-11T18:31:04Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 138, 'state': 'CLOSED', 'createdAt': '2020-03-29T06:05:54Z', 'updatedAt': '2020-04-10T23:40:59Z', 'closedAt': '2020-04-10T23:40:10Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 141, 'state': 'CLOSED', 'createdAt': '2020-04-04T08:55:44Z', 'updatedAt': '2020-04-11T15:23:39Z', 'closedAt': '2020-04-11T15:23:39Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 142, 'state': 'CLOSED', 'createdAt': '2020-04-04T14:24:51Z', 'updatedAt': '2020-04-11T15:20:12Z', 'closedAt': '2020-04-11T15:20:12Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}, {'node': {'name': 'Discussion'}}]}}}
+{'node': {'number': 143, 'state': 'CLOSED', 'createdAt': '2020-04-09T05:19:05Z', 'updatedAt': '2020-04-18T15:39:37Z', 'closedAt': '2020-04-18T15:39:37Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 145, 'state': 'CLOSED', 'createdAt': '2020-04-10T21:38:24Z', 'updatedAt': '2020-04-11T03:53:18Z', 'closedAt': '2020-04-11T03:53:17Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 146, 'state': 'CLOSED', 'createdAt': '2020-04-11T00:09:42Z', 'updatedAt': '2022-03-23T16:30:28Z', 'closedAt': '2022-03-23T16:30:28Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}, {'node': {'name': 'Future issue'}}]}}}
+{'node': {'number': 149, 'state': 'CLOSED', 'createdAt': '2020-04-11T16:02:10Z', 'updatedAt': '2020-04-11T16:37:47Z', 'closedAt': '2020-04-11T16:37:47Z', 'labels': {'edges': []}}}
+{'node': {'number': 151, 'state': 'CLOSED', 'createdAt': '2020-04-11T18:30:02Z', 'updatedAt': '2020-04-13T17:03:41Z', 'closedAt': '2020-04-13T17:03:41Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 152, 'state': 'CLOSED', 'createdAt': '2020-04-11T18:33:55Z', 'updatedAt': '2020-04-18T15:39:44Z', 'closedAt': '2020-04-18T15:39:44Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 153, 'state': 'CLOSED', 'createdAt': '2020-04-11T18:40:32Z', 'updatedAt': '2020-04-22T15:40:58Z', 'closedAt': '2020-04-22T15:40:58Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 157, 'state': 'CLOSED', 'createdAt': '2020-04-14T01:10:59Z', 'updatedAt': '2020-04-14T01:17:08Z', 'closedAt': '2020-04-14T01:17:08Z', 'labels': {'edges': [{'node': {'name': 'sunraster'}}]}}}
+{'node': {'number': 166, 'state': 'CLOSED', 'createdAt': '2020-05-05T10:12:22Z', 'updatedAt': '2020-07-23T09:43:39Z', 'closedAt': '2020-07-23T09:43:39Z', 'labels': {'edges': [{'node': {'name': 'priority-high'}}]}}}
+{'node': {'number': 167, 'state': 'CLOSED', 'createdAt': '2020-06-26T15:26:57Z', 'updatedAt': '2020-10-06T11:09:23Z', 'closedAt': '2020-10-06T11:09:23Z', 'labels': {'edges': []}}}
+{'node': {'number': 176, 'state': 'CLOSED', 'createdAt': '2021-01-04T15:08:27Z', 'updatedAt': '2025-01-09T09:50:54Z', 'closedAt': '2025-01-08T22:01:34Z', 'labels': {'edges': []}}}
+{'node': {'number': 177, 'state': 'CLOSED', 'createdAt': '2021-01-04T17:52:19Z', 'updatedAt': '2021-11-08T18:15:00Z', 'closedAt': '2021-11-08T18:15:00Z', 'labels': {'edges': []}}}
+{'node': {'number': 180, 'state': 'OPEN', 'createdAt': '2021-02-08T20:43:28Z', 'updatedAt': '2022-06-02T12:59:47Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 190, 'state': 'CLOSED', 'createdAt': '2021-11-08T18:07:52Z', 'updatedAt': '2022-03-08T19:04:56Z', 'closedAt': '2022-03-08T19:04:05Z', 'labels': {'edges': []}}}
+{'node': {'number': 191, 'state': 'CLOSED', 'createdAt': '2021-11-11T21:51:23Z', 'updatedAt': '2022-03-08T18:28:05Z', 'closedAt': '2022-03-08T18:28:05Z', 'labels': {'edges': []}}}
+{'node': {'number': 194, 'state': 'CLOSED', 'createdAt': '2021-11-19T17:18:18Z', 'updatedAt': '2021-11-19T23:51:06Z', 'closedAt': '2021-11-19T23:50:34Z', 'labels': {'edges': []}}}
+{'node': {'number': 195, 'state': 'CLOSED', 'createdAt': '2021-11-19T23:49:46Z', 'updatedAt': '2022-03-08T18:29:46Z', 'closedAt': '2022-03-08T18:29:46Z', 'labels': {'edges': []}}}
+{'node': {'number': 196, 'state': 'CLOSED', 'createdAt': '2021-12-31T14:14:53Z', 'updatedAt': '2022-06-08T19:46:25Z', 'closedAt': '2022-06-08T19:46:25Z', 'labels': {'edges': []}}}
+{'node': {'number': 202, 'state': 'CLOSED', 'createdAt': '2022-05-06T18:25:00Z', 'updatedAt': '2022-07-14T15:02:43Z', 'closedAt': '2022-07-14T15:02:43Z', 'labels': {'edges': []}}}
+{'node': {'number': 206, 'state': 'OPEN', 'createdAt': '2022-06-08T19:35:46Z', 'updatedAt': '2022-07-27T03:39:40Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 208, 'state': 'CLOSED', 'createdAt': '2022-07-14T15:02:12Z', 'updatedAt': '2022-10-09T19:42:01Z', 'closedAt': '2022-10-09T19:42:00Z', 'labels': {'edges': []}}}
+{'node': {'number': 216, 'state': 'CLOSED', 'createdAt': '2022-10-09T19:40:49Z', 'updatedAt': '2024-12-06T12:54:09Z', 'closedAt': '2024-12-06T12:54:09Z', 'labels': {'edges': []}}}
+{'node': {'number': 229, 'state': 'CLOSED', 'createdAt': '2023-02-19T14:28:48Z', 'updatedAt': '2023-03-09T20:59:30Z', 'closedAt': '2023-03-09T20:59:29Z', 'labels': {'edges': []}}}
+{'node': {'number': 234, 'state': 'CLOSED', 'createdAt': '2023-03-31T19:16:19Z', 'updatedAt': '2023-03-31T21:26:18Z', 'closedAt': '2023-03-31T21:26:18Z', 'labels': {'edges': []}}}
+{'node': {'number': 236, 'state': 'CLOSED', 'createdAt': '2023-04-10T20:56:36Z', 'updatedAt': '2023-04-14T15:19:50Z', 'closedAt': '2023-04-14T15:19:50Z', 'labels': {'edges': []}}}
+{'node': {'number': 240, 'state': 'OPEN', 'createdAt': '2023-05-18T15:21:23Z', 'updatedAt': '2024-12-07T00:20:01Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 241, 'state': 'OPEN', 'createdAt': '2023-05-18T15:27:39Z', 'updatedAt': '2023-05-19T08:17:32Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 245, 'state': 'CLOSED', 'createdAt': '2023-07-10T04:59:59Z', 'updatedAt': '2024-11-21T16:22:10Z', 'closedAt': '2024-11-21T16:13:08Z', 'labels': {'edges': []}}}
+{'node': {'number': 258, 'state': 'OPEN', 'createdAt': '2024-06-18T10:25:47Z', 'updatedAt': '2024-12-07T00:20:00Z', 'closedAt': None, 'labels': {'edges': []}}}
+{'node': {'number': 281, 'state': 'CLOSED', 'createdAt': '2025-04-10T21:40:44Z', 'updatedAt': '2025-06-12T16:22:06Z', 'closedAt': '2025-06-12T16:22:06Z', 'labels': {'edges': []}}}
+{'node': {'number': 284, 'state': 'OPEN', 'createdAt': '2025-06-11T09:42:06Z', 'updatedAt': '2025-06-11T15:03:58Z', 'closedAt': None, 'labels': {'edges': [{'node': {'name': 'Discussion'}}]}}, 'endCursor': 'Y3Vyc29yOnYyOpK5MjAyNS0wNi0xMVQxMDo0MjowNiswMTowMM667j1K'}
